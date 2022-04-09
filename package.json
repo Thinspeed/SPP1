@@ -1,0 +1,25 @@
+{
+  "name": "spp1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "start": "node 1.js",
+    "dev": "nodemon 1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thinspeed/SPP1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thinspeed/SPP1/issues"
+  },
+  "homepage": "https://github.com/Thinspeed/SPP1#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
