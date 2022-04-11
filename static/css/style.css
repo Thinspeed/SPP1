@@ -15,6 +15,46 @@ body {
     text-align: center;
     height: 100vh;
     overflow: hidden;
+    margin: 0px 100px;
+}
+
+.table {
+    width: 100%;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.table th {
+    padding: 10px;
+    background-color: #007ACC;
+    color: #fff;
+    font-size: 20px;
+}
+
+.table td {
+    font-family: Verdana;
+    padding: 5px;
+}
+
+.table td:not(:last-child) {
+    border-right: 3px solid #ccc;
+}
+
+.table th:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #E7EAED;
+}
+
+.table tr:hover {
+    background-color: #ccc;
 }
 
 h1 {
@@ -22,14 +62,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    #time {
-        font-size: 5.7rem;
-    }
-
-    #date {
-        font-size: 1.125rem;
-    }
-
     h1 {
         font-size: 22px;
     }
@@ -40,14 +72,6 @@ h1 {
 }
 
 @media (max-width: 320px) {
-    #time {
-        font-size: 4rem;
-    }
-
-    #date {
-        font-size: 0.9rem;
-    }
-
     h1 {
         font-size: 18px;
     }

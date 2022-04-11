@@ -2,25 +2,38 @@
 <html>
         <%- include('../static/html/head.html'); -%>
     <body>
-        <table>
-            <tr>
-                <td>
-                    <p>id</p>
-                </td>
-                <td>
-                    <p>name</p>
-                </td>
-                <td>
-                    <p>time</p>
-                </td>
-                <td>
-                    <p>status</p>
-                </td>
-            </tr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <p>id</p>
+                    </th>
+                    <th>
+                        <p>name</p>
+                    </th>
+                    <th>
+                        <p>time</p>
+                    </th>
+                    <th>
+                        <p>status</p>
+                    </th>
+                </tr>
+            </thead>
             <% for(let i = 0; i < a.length; i++) { %>
-                <tr><td>
-                <%- JSON.stringify(a[i]) %>
-                </td></tr>
+                <tr>
+                    <td>
+                        <%- a[i].Id %>
+                    </td>
+                    <td>
+                        <%- a[i].Name %>
+                    </td>
+                    <td>
+                        <%- `${a[i].Date.getDate()}.${a[i].Date.getMonth()}.${a[i].Date.getFullYear()}` %>
+                    </td>
+                    <td>
+                        <%- a[i].Status %>
+                    </td>
+                </tr>
             <%}%>
 
         </table> 
