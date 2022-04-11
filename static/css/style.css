@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    #time {
+        font-size: 5.7rem;
+    }
+
+    #date {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    #time {
+        font-size: 4rem;
+    }
+
+    #date {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+}

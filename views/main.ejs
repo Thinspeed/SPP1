@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+        <%- include('../static/html/head.html'); -%>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <p>id</p>
+                </td>
+                <td>
+                    <p>name</p>
+                </td>
+                <td>
+                    <p>time</p>
+                </td>
+                <td>
+                    <p>status</p>
+                </td>
+            </tr>
+            <% for(let i = 0; i < a.length; i++) { %>
+                <tr><td>
+                <%- JSON.stringify(a[i]) %>
+                </td></tr>
+            <%}%>
+
+        </table> 
+    </body>
+</html>
