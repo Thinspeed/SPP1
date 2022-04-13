@@ -6,16 +6,38 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
+    margin: 0px 100px;
+}
+
+.form-container {
+    margin: 200px 0px;
+}
+
+.add-form {
+    margin: auto;
     display: flex;
     flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 300px;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0px 100px;
+}
+
+.add-form input {
+    margin: 10px 0px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.add-form .textbox {
+    border-bottom: #007ACC 2px solid;
+}
+
+.add-form .button {
+    border-radius: 10px;
+    background-color: #007ACC;
+    color: #fff;
+    padding: 5px 0px;
+    font-size: 20px;
 }
 
 .table {
@@ -55,28 +77,4 @@ body {
 
 .table tr:hover {
     background-color: #ccc;
-}
-
-h1 {
-    margin-bottom: 2rem;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 22px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 320px) {
-    h1 {
-        font-size: 18px;
-    }
-
-    h2 {
-        font-size: 14px;
-    }
 }
