@@ -6,7 +6,10 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    margin: 0px 100px;
+    margin: 0px 20px 0px 20px;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
 }
 
 .form-container {
@@ -17,11 +20,11 @@ body {
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 300px;
     align-items: center;
 }
 
-.add-form input {
+.add-form input, .add-form button {
     margin: 10px 0px;
     width: 100%;
     border: none;
@@ -32,7 +35,7 @@ body {
     border-bottom: #007ACC 2px solid;
 }
 
-.add-form .button {
+.add-form button {
     border-radius: 10px;
     background-color: #007ACC;
     color: #fff;
@@ -58,6 +61,10 @@ body {
     font-size: 20px;
 }
 
+.table tr {
+    font-size: 16px;
+}
+
 .table td {
     font-family: Verdana;
     padding: 5px;
@@ -77,4 +84,62 @@ body {
 
 .table tr:hover {
     background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+
+    .table th {
+        font-size: 15px;
+    }
+
+    .table tr {
+        font-size: 12px;
+    }
+}
+
+.task {
+    color: #007ACC;
+}
+
+.task-content {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    max-width: 300px;
+}
+
+.task-title {
+    margin: 0px auto 20px auto;
+    display: flex;
+}
+
+.task-body {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.task-body p {
+    border-bottom: #007ACC solid 2px;
+    margin-bottom: 20px;
+}
+
+.task-actions form {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-actions button {
+    width: 100%;
+    margin: 10px 20px;
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #007ACC;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
 }

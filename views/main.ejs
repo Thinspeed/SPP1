@@ -6,7 +6,7 @@
             <form class="add-form" action="" method="post">
                 <input class="textbox" type="text" name="name" placeholder="name">
                 <input class="textbox" type="date" name="date" placeholder="time">
-                <input class="button" type="submit" value="add">
+                <button value="created" name="status">create</button>
             </form>
         </div> 
         <div class="table-container">
@@ -27,23 +27,22 @@
                         </th>
                     </tr>
                 </thead>
-                <% for(let i = 0; i < a.length; i++) { %>
-                    <tr>
+                <% for(let i = 0; i < tasks.length; i++) { %>
+                    <tr onclick="document.location='?id=<%- tasks[i].Id%>'">
                         <td>
-                            <%- a[i].Id %>
+                            <%- tasks[i].Id %>
                         </td>
                         <td>
-                            <%- a[i].Name %>
+                            <%- tasks[i].Name %>
                         </td>
                         <td>
-                            <%- `${a[i].Date.getDate()}.${a[i].Date.getMonth()}.${a[i].Date.getFullYear()}` %>
+                            <%- `${tasks[i].Date.getDate()}.${tasks[i].Date.getMonth()}.${tasks[i].Date.getFullYear()}` %>
                         </td>
                         <td>
-                            <%- a[i].Status %>
+                            <%- tasks[i].Status %>
                         </td>
                     </tr>
                 <%}%>
-    
             </table> 
         </div>
     </body>
