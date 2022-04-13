@@ -1,25 +1,11 @@
-const Status = { 
-    Created : 'created', 
-    InProcess : 'in process ', 
-    Canceled : 'canceled',
-    Done : 'done',
-}
-
-class Task {
-    constructor(id, name, status, date) {
-        this.Id = id;
-        this.Name = name;
-        this.Status = status; 
-        this.Date = date;
-    }
-}
-
 const dotenv = require('dotenv');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const db = require('./database/db');
+const Task = require('./Task').Task;
+const Status = require('./Task').Status;
 
 dotenv.config();
 
