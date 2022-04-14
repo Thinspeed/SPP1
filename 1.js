@@ -35,7 +35,11 @@ app.get('/', bodyParser.urlencoded(), async (req, res) => {
     if (req.query['id']) {
         const row = 
         (await db.query('SELECT * FROM task WHERE id=$1', [ req.query['id'] ])).rows[0];        
-        fs.readdir('database/uploads/1', (err, files) => {
+        fs.readdir(path.join('database', 'uploads', req.query['id']), (err, files) => {
+            if (err){
+                files = [];
+            }
+
             res.render('task', { 
                 task : new Task(
                     row['id'],
@@ -47,6 +51,7 @@ app.get('/', bodyParser.urlencoded(), async (req, res) => {
             });
         });
 
+        return;
     }
 
     const rows = (await db.query('SELECT * FROM task ORDER BY id')).rows;
