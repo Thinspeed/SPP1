@@ -27,22 +27,24 @@
                         </th>
                     </tr>
                 </thead>
-                <% for(let i = 0; i < tasks.length; i++) { %>
-                    <tr onclick="document.location='?id=<%- tasks[i].Id%>'">
-                        <td>
-                            <%- tasks[i].Id %>
-                        </td>
-                        <td>
-                            <%- tasks[i].Name %>
-                        </td>
-                        <td>
-                            <%- `${tasks[i].Date.getDate()}.${tasks[i].Date.getMonth()}.${tasks[i].Date.getFullYear()}` %>
-                        </td>
-                        <td>
-                            <%- tasks[i].Status %>
-                        </td>
-                    </tr>
-                <%}%>
+                <tbody>
+                    <% for(let i = 0; i < tasks.length; i++) { %>
+                        <tr onclick="document.location='?id=<%- tasks[i].Id%>'">
+                            <td>
+                                <%- tasks[i].Id %>
+                            </td>
+                            <td>
+                                <%- tasks[i].Name %>
+                            </td>
+                            <td>
+                                <%- `${tasks[i].Date.getDate()}.${tasks[i].Date.getMonth()}.${tasks[i].Date.getFullYear()}` %>
+                            </td>
+                            <td>
+                                <%- tasks[i].Status %>
+                            </td>
+                        </tr>
+                    <%}%>
+                </tbody>
             </table> 
         </div>
     </body>
