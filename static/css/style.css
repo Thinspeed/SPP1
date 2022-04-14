@@ -144,3 +144,36 @@ body {
     border-radius: 10px;
     outline: none;
 }
+
+.task-actions button:hover {
+    cursor: pointer;
+}
+
+.add-file form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-file form input {
+    margin: 10px;
+    outline: none;
+} 
+
+.add-file form button {
+    background-color: #007ACC;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 200px;
+    margin: 10px auto;
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #007ACC;
+    margin: 5px 0px;
+}

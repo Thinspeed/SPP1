@@ -1,4 +1,12 @@
-<% let form = '<div class="task-actions"><form action="" method="post"><button value="done" name="status">done</button><button value="canceled" name="status">cancel</button></form></div>'%>
+<%
+let form = `
+<div class="task-actions">
+    <form action="" method="post">
+        <button value="done" name="status">done</button>
+        <button value="canceled" name="status">cancel</button>
+    </form>
+</div>`
+%>
 
 <!DOCTYPE html>
 <html>
@@ -18,6 +26,17 @@
                 <% if (task.Status == 'created') { %>
                     <%- form %>
                 <% }%>
+                <div class="add-file">
+                    <form action="/upload?id=<%-task.Id%>" method="post" enctype="multipart/form-data">
+                        <input type="file" name="files" multiple>
+                        <button value="true" name="load">load</button>
+                    </form>
+                </div>
+                <% for(let i = 0; i < files.length; i++) { %>
+                    <a href="/download/?id=<%-task.Id%>&file=<%-files[i]%>">
+                        <%- `${files[i]}` %>
+                    </a>
+                <%}%>
             </div>
         </div>
     </body>
